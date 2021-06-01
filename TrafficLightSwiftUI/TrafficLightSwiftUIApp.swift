@@ -11,7 +11,7 @@ import SwiftUI
 struct TrafficLightSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(redTurnLight: 0.3, yellowTurnLight: 0.3, greenTurnLight: 0.3, buttonTitle: "Start")
         }
     }
 }

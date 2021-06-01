@@ -11,6 +11,7 @@
 		147F5D36266661CB008A337A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F5D35266661CB008A337A /* ContentView.swift */; };
 		147F5D38266661CD008A337A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147F5D37266661CD008A337A /* Assets.xcassets */; };
 		147F5D3B266661CD008A337A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147F5D3A266661CD008A337A /* Preview Assets.xcassets */; };
+		147F5D4326666234008A337A /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147F5D4226666234008A337A /* ColorCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		147F5D37266661CD008A337A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		147F5D3A266661CD008A337A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		147F5D3C266661CD008A337A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		147F5D4226666234008A337A /* ColorCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				147F5D33266661CB008A337A /* TrafficLightSwiftUIApp.swift */,
 				147F5D35266661CB008A337A /* ContentView.swift */,
+				147F5D4226666234008A337A /* ColorCircle.swift */,
 				147F5D37266661CD008A337A /* Assets.xcassets */,
 				147F5D3C266661CD008A337A /* Info.plist */,
 				147F5D39266661CD008A337A /* Preview Content */,
@@ -140,6 +143,7 @@
 			files = (
 				147F5D36266661CB008A337A /* ContentView.swift in Sources */,
 				147F5D34266661CB008A337A /* TrafficLightSwiftUIApp.swift in Sources */,
+				147F5D4326666234008A337A /* ColorCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
