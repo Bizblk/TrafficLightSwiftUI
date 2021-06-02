@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var redTurnLight: Double
-    @State var yellowTurnLight: Double
-    @State var greenTurnLight: Double
-    @State var buttonTitle: String
+    @State private var redTurnLight: Double = 0.3
+    @State private var yellowTurnLight: Double = 0.3
+    @State private var greenTurnLight: Double = 0.3
+    @State private var buttonTitle = "Start"
     
     private let dark: Double = 0.3
     private let light: Double = 1
@@ -39,7 +39,8 @@ struct ContentView: View {
                     .frame(width: 200, height: 75)
                     .background(Color.blue)
                     .cornerRadius(20.0)
-                    .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 4))
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 4))
                 }.padding(.bottom, 60)
             }
             
@@ -47,7 +48,7 @@ struct ContentView: View {
     }
     
     
-  private func trafficLight() {
+    private func trafficLight() {
         buttonTitle = "NEXT"
         
         if redTurnLight == yellowTurnLight {
@@ -69,7 +70,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(redTurnLight: 0.3, yellowTurnLight: 0.3, greenTurnLight: 0.3, buttonTitle: "Start")
+        ContentView()
     }
 }
 
