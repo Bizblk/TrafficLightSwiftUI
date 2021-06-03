@@ -9,13 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var redTurnLight: Double = 0.3
-    @State private var yellowTurnLight: Double = 0.3
-    @State private var greenTurnLight: Double = 0.3
-    @State private var buttonTitle = "Start"
+    @State private var redTurnLight = 0.3
+    @State private var yellowTurnLight = 0.3
+    @State private var greenTurnLight = 0.3
+    @State private var buttonTitle = "START"
     
-    private let dark: Double = 0.3
-    private let light: Double = 1
+    
     
     var body: some View {
         ZStack {
@@ -24,24 +23,27 @@ struct ContentView: View {
             
             VStack {
                 
-                VStack(spacing: 20)
-                {
-                    ColorCircle(color: .red).opacity(redTurnLight)
-                    ColorCircle(color: .yellow).opacity(yellowTurnLight)
-                    ColorCircle(color: .green).opacity(greenTurnLight)
+                VStack(spacing: 20) {
+                    ColorCircle(color: .red)
+                        .opacity(redTurnLight)
+                    ColorCircle(color: .yellow)
+                        .opacity(yellowTurnLight)
+                    ColorCircle(color: .green)
+                        .opacity(greenTurnLight)
                 }.padding(.top, 70)
                 Spacer()
                 
-                HStack {
-                    Button(action: {trafficLight()} ) {
-                        Text(buttonTitle).font(.largeTitle).foregroundColor(.white)
-                    }
-                    .frame(width: 200, height: 75)
-                    .background(Color.blue)
-                    .cornerRadius(20.0)
-                    .overlay(RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.white, lineWidth: 4))
-                }.padding(.bottom, 60)
+                Button(action: {trafficLight()} ) {
+                    Text(buttonTitle)
+                        .font(.largeTitle)
+                        .foregroundColor(.white)
+                }
+                .frame(width: 200, height: 75)
+                .background(Color.blue)
+                .cornerRadius(20.0)
+                .overlay(RoundedRectangle(cornerRadius: 20)
+                            .stroke(Color.white, lineWidth: 4))
+                .padding(.bottom, 60)
             }
             
         }
@@ -50,6 +52,8 @@ struct ContentView: View {
     
     private func trafficLight() {
         buttonTitle = "NEXT"
+        let dark: Double = 0.3
+        let light: Double = 1
         
         if redTurnLight == yellowTurnLight {
             greenTurnLight = dark
